@@ -1,5 +1,10 @@
-const Blockchain = require("../src/blockchain");
+// Unit Testing
 
+const Blockchain = require("../src/blockchain");
+const blockchainData = require("./mocks/blockchain_data");
+
+// Challenges: 
+// functional and integration
 
 let blockchain = null;
 beforeEach(() => {
@@ -17,8 +22,10 @@ test('Create New Block', () => {
 test('Create New Transaction', () => {
     const newBlock = blockchain.createNewBlock(233, "PREV_HASH", "NEW_HASH");
     expect(newBlock).not.toBeNull();
-    const blockNumber = blockchain.createNewTransaction(123, "0xALEX032313", "0xJOAN893728");
-    expect(blockNumber).toBe(2);
+    const transaction = blockchain.createNewTransaction(123, "0xALEX032313", "0xJOAN893728");
+    expect(transaction).not.toBeNull();
+})
 
-    console.log('blockchain.getLastBlock() :>> ', blockchain.proofOfWork("NEW_HASH", blockchain.getLastBlock()));
+test('Valid Consensus', () => {
+    expect(blockchain.chainIsValid(blockchainData.chain)).toBe(true);
 })
