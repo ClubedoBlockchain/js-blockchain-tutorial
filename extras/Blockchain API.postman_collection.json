@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "ff895bdc-befc-4677-a485-bace68a0ad87",
+		"name": "Blockchain API",
+		"description": "Blockchain API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Blockchain Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/blockchain",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blockchain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 2,\n    \"sender\": \"0x9091209102109120DION\",\n    \"recipient\": \"0x7867868687868MAIRA\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mine",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mine",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register and Broadcast",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newNodeUrl\": \"http://localhost:3002\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register-and-broadcast-node",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register-and-broadcast-node"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Node",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newNodeUrl\": \"http://localhost:3001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register-node",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register-node"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Node Bulk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"allNetworkNodes\": [\"http://localhost:3001\", \"http://localhost:3010\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register-nodes-bulk",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register-nodes-bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consensus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3003/consensus",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"consensus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Block",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/transaction/8e96fcab496247789fbeadf5eccb8d7bs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transaction",
+						"8e96fcab496247789fbeadf5eccb8d7bs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Address Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/address/0x9091209102109120JON",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address",
+						"0x9091209102109120JON"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
