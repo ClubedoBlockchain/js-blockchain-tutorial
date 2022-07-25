@@ -23,7 +23,7 @@ class Blockchain {
         this.chain.push(newBlock);
         return newBlock;
     }
-    chainIsValid(chain) {
+    isChainValid(chain) {
         
         for (let i = 1; i < chain.length; i++) {
             const currentBlock = chain[i];

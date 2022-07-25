@@ -162,14 +162,14 @@ const runServer = (port) => {
                     }
                 });
 
-                if (!newLongestChain || (newLongestChain && !blockchain.chainIsValid(newLongestChain))) {
+                if (!newLongestChain || (newLongestChain && !blockchain.isChainValid(newLongestChain))) {
                     res.json({
                         message: "Current chain will not be replaced.",
                         chain: blockchain.chain
                     })
                 }
 
-                if (newLongestChain && blockchain.chainIsValid(newLongestChain)) {
+                if (newLongestChain && blockchain.isChainValid(newLongestChain)) {
                     
                     blockchain.chain = newLongestChain;
                     blockchain.pendingTransactions = newPendingTransactions;

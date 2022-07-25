@@ -27,5 +27,5 @@ test('Create New Transaction', () => {
 })
 
 test('Valid Consensus', () => {
-    expect(blockchain.chainIsValid(blockchainData.chain)).toBe(true);
+    expect(blockchain.isChainValid(blockchainData.chain)).toBe(true);
 })
